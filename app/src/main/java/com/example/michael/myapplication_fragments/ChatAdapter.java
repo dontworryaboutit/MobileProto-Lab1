@@ -42,13 +42,13 @@ public class ChatAdapter extends ArrayAdapter {
         holder = new ChatHolder();
 
         //TextViews
-        holder.name = (TextView) view.findViewById(R.id.item_profile_name);
-        holder.body = (TextView) view.findViewById(R.id.item_chat_body);
-        holder.time = (TextView) view.findViewById(R.id.item_chat_time);
+        holder.name = (TextView) view.findViewById(R.id.chat_item_name);
+        holder.body = (TextView) view.findViewById(R.id.chat_item_msg);
+        holder.time = (TextView) view.findViewById(R.id.chat_item_time);
 
         //ImageViews
-        holder.background = view.findViewById(R.id.item_profile_background);
-        holder.picture = (ImageView) view.findViewById(R.id.item_profile_picture);
+        holder.background = view.findViewById(R.id.chat_item_img);
+        holder.picture = (ImageView) view.findViewById(R.id.chat_item_pic);
         fillViews(holder, chats.get(position));
         return view;
     }

@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:baselineAligned="false"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
     <RelativeLayout
-        android:id="@+id/item_profile_background"
-        android:layout_weight=".20"
+        android:id="@+id/chat_item_img"
+        android:layout_weight="@dimen/chat_item_img_width_weight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/item_profile_right"
-        android:layout_marginEnd="@dimen/item_profile_right"
-        android:background="@android:color/holo_blue_dark">
+        android:layout_marginRight="@dimen/chat_item_img_margin_right"
+        android:layout_marginEnd="@dimen/chat_item_img_margin_right"
+        android:background="@android:color/holo_blue_dark" >
         <ImageView
-            android:id="@+id/item_profile_picture"
-            android:contentDescription="@string/item_pic_name"
-            android:layout_width="fill_parent"
+            android:id="@+id/chat_item_pic"
+            android:contentDescription="@string/chat_item_pic_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/item_profile_border"
-            android:background="@drawable/ic_launcher"/>
+            android:padding="@dimen/chat_item_name_border"
+            android:background="@drawable/ic_launcher" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/chat_item_body"
+        android:layout_weight="@dimen/chat_item_body_width_weight"
         android:layout_width="0dp"
-        android:layout_weight=".75"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
         <TextView
-            android:id="@+id/item_profile_name"
+            android:id="@+id/chat_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/item_name_top"
-            android:text="@string/item_name_default"
-            android:textSize="@dimen/item_profile_name"/>
+            android:layout_marginTop="@dimen/chat_item_name_top"
+            android:text="@string/chat_item_name_default"
+            android:textSize="@dimen/chat_item_name" />
         <TextView
-            android:id="@+id/item_chat_body"
+            android:id="@+id/chat_item_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_profile_name"
-            android:textSize = "@dimen/item_chat_body"
+            android:layout_below="@id/chat_item_name"
+            android:textSize = "@dimen/chat_item_msg"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:text="@string/filler_text"
-            />
+            android:text="@string/chat_item_msg_default" />
         <TextView
-            android:id="@+id/item_chat_time"
+            android:id="@+id/chat_item_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/item_profile_name"
-            android:layout_marginRight="@dimen/item_time_right"
-            android:layout_marginEnd="@dimen/item_time_right"
+            android:layout_alignTop="@id/chat_item_name"
+            android:layout_marginRight="@dimen/chat_item_time_margin_right"
+            android:layout_marginEnd="@dimen/chat_item_time_margin_right"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:textSize="@dimen/item_chat_time"
-            android:text="@string/filler_text"/>
+            android:textSize="@dimen/chat_item_time"
+            android:text="@string/chat_item_time_default" />
     </RelativeLayout>
 
 </LinearLayout>

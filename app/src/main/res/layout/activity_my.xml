@@ -19,7 +19,7 @@
             android:layout_height="fill_parent"
             android:scrollHorizontally="false"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/item_chat_body"
+            android:textSize="@dimen/chat_item_msg"
             android:hint="@string/main_hint"
             android:layout_marginLeft="@dimen/main_chat_padding"
             android:layout_marginRight="@dimen/main_chat_padding"/>
@@ -30,8 +30,8 @@
             android:layout_width="0dp"
             android:layout_weight=".3"
             android:layout_height="fill_parent"
-            android:text="@string/main_button_text"
-            android:textSize="@dimen/main_send_button"
+            android:text="@string/main_button"
+            android:textSize="@dimen/main_button"
             android:layout_margin = "0dp"
             android:padding="0dp"
             />
