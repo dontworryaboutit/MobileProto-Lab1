@@ -62,14 +62,11 @@ public class ChatAdapter extends ArrayAdapter {
         holder.name.setText(chat.sender);
         holder.body.setText(chat.body);
         holder.time.setText(formatTime(chat.time));
-
-        holder.background.setBackgroundResource(MyActivity.userColors.get(chat.sender));
-        //holder.picture.setImageDrawable(getProfileDrawable(chat.userId));
     }
 
     private String formatTime(long time){
         if (DateUtils.isToday(time)){
-            return new SimpleDateFormat("hh:mm:ss a").format(new Date(time));
+            return new SimpleDateFormat("E, hh:mm:ss a").format(new Date(time));
         }
         return new SimpleDateFormat("MM/DD, hh:mm:ss a").format(new Date(time));
     }

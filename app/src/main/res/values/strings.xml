@@ -6,7 +6,7 @@
     <string name="menu_change_username_prompt">Set Username</string>
 
     <string name="main_button">Enter</string>
-    <string name="main_hint">Text here</string>
+    <string name="main_input_entry_hint">Text here</string>
 
     <string name="chat_item_pic_name">Avatar</string>
     <string name="chat_item_name_default">Student</string>
