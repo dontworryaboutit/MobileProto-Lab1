@@ -1,4 +1,4 @@
-package com.example.michael.myapplication_fragments;
+package com.example.michael.lab1;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -35,7 +35,7 @@ public class ChatAdapter extends ArrayAdapter {
     }
 
     @Override
-    public View getView(int position, View view, ViewGroup parent){
+    public View getView(int position, View view, ViewGroup parent) {
         ChatHolder holder;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(resource, parent, false);
@@ -54,33 +54,33 @@ public class ChatAdapter extends ArrayAdapter {
     }
 
     @Override
-    public int getCount(){
+    public int getCount() {
         return this.chats.size();
     }
 
-    private void fillViews(ChatHolder holder, ModelChat chat){
+    private void fillViews(ChatHolder holder, ModelChat chat) {
         holder.name.setText(chat.sender);
         holder.body.setText(chat.body);
         holder.time.setText(formatTime(chat.time));
     }
 
-    private String formatTime(long time){
-        if (DateUtils.isToday(time)){
+    private String formatTime(long time) {
+        if (DateUtils.isToday(time)) {
             return new SimpleDateFormat("E, hh:mm:ss a").format(new Date(time));
         }
         return new SimpleDateFormat("MM/DD, hh:mm:ss a").format(new Date(time));
     }
 
-    private Drawable getProfileDrawable(String id){
+    private Drawable getProfileDrawable(String id) {
         return null;
     }
 
-    public void addChats(List<ModelChat> newChats){
+    public void addChats(List<ModelChat> newChats) {
         this.chats.addAll(newChats);
         notifyDataSetChanged();
     }
 
-    public void addChat(ModelChat chat){
+    public void addChat(ModelChat chat) {
         this.chats.add(chat);
         notifyDataSetChanged();
     }

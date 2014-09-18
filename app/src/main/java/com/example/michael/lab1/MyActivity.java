@@ -1,4 +1,4 @@
-package com.example.michael.myapplication_fragments;
+package com.example.michael.lab1;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,6 +14,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyActivity extends Activity {
     ChatAdapter chatAdapter;
     public static String username = "default";
@@ -28,9 +67,17 @@ public class MyActivity extends Activity {
             Toast.makeText(this, "You are signed in as default! Click the user icon to change your name!", Toast.LENGTH_SHORT).show();
         }
 
-        getChats();
+        getChats(); // run other setup stuff
         setupViews();
         Log.i(MyActivity.class.getSimpleName(), "Hello, World!");
+    }
+
+    private void getChats(){
+        // make list of chats of type ModelChat
+        List<ModelChat> newChats = new ArrayList<ModelChat>();
+        if (chatAdapter == null)
+            chatAdapter = new ChatAdapter(this, new ArrayList<ModelChat>(), R.layout.chat_item);
+        chatAdapter.addChats(newChats);
     }
 
     private void setupViews(){
@@ -42,14 +89,6 @@ public class MyActivity extends Activity {
 
         Button sendButton = (Button) findViewById(R.id.main_input_button);
         sendButton.setOnClickListener(ClickListeners.sendButtonListener(this,chatAdapter));
-    }
-
-    private void getChats(){
-        // Use content provider in the future
-        List<ModelChat> newChats = new ArrayList<ModelChat>();
-        if (chatAdapter == null)
-            chatAdapter = new ChatAdapter(this, new ArrayList<ModelChat>(), R.layout.chat_item);
-        chatAdapter.addChats(newChats);
     }
 
     @Override

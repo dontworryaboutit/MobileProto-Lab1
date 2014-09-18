@@ -1,4 +1,4 @@
-package com.example.michael.myapplication_fragments;
+package com.example.michael.lab1;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
